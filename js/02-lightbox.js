@@ -18,14 +18,6 @@ const elements = galleryItems
   .join("");
 ulEl.insertAdjacentHTML("afterbegin", elements);
 
-
-const onClick = (event) => {
-    event.preventDefault();
-    if (event.target.className === "gallery__image") {
-        const lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt",  captionDelay: 250, })
-    }
-};
-
-ulEl.addEventListener('click', onClick);
+const lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt",  captionDelay: 250, });
 
 console.log(galleryItems);
